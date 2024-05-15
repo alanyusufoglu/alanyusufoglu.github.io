@@ -1,0 +1,282 @@
+
+.iletişim_kismi
+{
+  border: 25px;
+  border-color: rgb(208, 123, 20);
+background-color: rgb(223, 143, 45);
+
+}
+
+.span_classi
+{
+  font-weight: bold;
+  text-decoration: underline;
+}
+.card_başlangic_rengi
+{
+  background-color: rgb(148, 111, 66);
+}
+
+.card_renklendirici:hover
+{
+ background-color: rgb(209, 179, 59);
+ z-index: 1;
+  } 
+
+.card_zoomlayici:hover
+{
+  transition: 0.7s;
+  transform: scale(1.1);
+}
+
+.img_size
+{
+  width: 100px;
+  height: 100px;
+}
+
+  .sosyal_medya_kismi
+  {
+  padding-left: 900px;
+display: inline-block;
+border: 10px;
+  }
+
+.hizli_geciş_kismi
+{
+  display: grid;
+  justify-items: start; 
+  border: 10px;
+  display: inline-block;
+}
+
+.ortalama {
+  display: flex;
+  justify-content: center;
+}
+
+.card_resim_düzenleme
+{
+  width:33%; 
+  display: inline-block;
+}
+.red-circle {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+body {
+  background-color: #d1f3e7;
+}
+
+#title-Tag-Line {
+  font-size: 20px;
+}
+ .card-item__bg{
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  display: block;
+  position: relative;
+  margin: 30px auto;
+  transform: translate(0px, 50px);
+  z-index: 5;
+} */
+
+.form {
+  background: #fff;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 5px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  border-top: 5px solid #0e3721;
+/*   z-index: 1; */
+  animation: bounce 1.5s infinite;
+}
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+}
+
+.title{
+  display: block;
+  font-family: sans-serif;
+  margin: 10px auto 5px;
+  width: 300px;
+}
+.termsConditions{
+  margin: 0 auto 5px 80px;
+}
+
+.pageTitle{
+  font-size: 2em;
+  font-weight: bold;
+}
+.secondaryTitle{
+  color: grey;
+}
+
+.name {
+  background-color: #ebebeb;
+  color: white;
+}
+.name:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.email {
+  background-color: #ebebeb;
+  height: 2em;
+}
+
+.email:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.message {
+  background-color: #ebebeb;
+  overflow: hidden;
+  height: 10rem;
+}
+
+.message:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 12em;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.formEntry {
+  display: block;
+  margin: 30px auto;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  transition: all 0.5s ease 0s;
+}
+
+.submit {
+  width: 200px;
+  color: white;
+  background-color: #0e3721;
+  font-size: 20px;
+}
+
+.submit:hover {
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  transform: translateY(-3px);
+  width: 300px;
+  border-top: 5px solid #0e3750;
+  border-radius: 0%;
+}
+
+@keyframes bounce {
+  0% {
+    tranform: translate(0, 4px);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+} 
+
+.badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2em 0.5em;
+}
+.heart-icon {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: red;
+  z-index: 9999; }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    transition: all 0.3s ease; 
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;}
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu > li {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    background-color: #eee;
+    cursor: pointer;}
+    
+    .star-rating {
+      font-size: 24px;
+  }
+  .star {
+      cursor: pointer;
+      color: #ccc;
+      transition: color 0.2s;
+  }
+  .star.active {
+      color: gold;
+  }
+  #search {
+    padding: 5px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+.result {
+    display: none;
+    margin-top: 10px;
+}
+.show {
+    display: block;
+}
+.keyboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.key {
+  width: 50px;
+  height: 100px;
+  background-color: #ccc;
+  border: 1px solid #999;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.ar {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  display: none;
+}

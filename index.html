@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="kolay ve güvenli aliveriş sitesi">
+    <meta name="author" content="ALAN YUSUFOĞLU">
+    <meta name="keywords" content="akilli telefonlar,laptop,kulaklik,monitor,saç kurutma makinesi,beyaz eşya,konsol,beyaz eşya">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0" >
+    <title style="padding-top: 20px;">ALANEXPRESS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+     rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+     crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+          transition: background-color 0.3s ease;
+      }
+      .dark-mode {
+          background-color: #222;
+          color: #fff;
+      }
+        
+    </style>
+  </style>
+</head>
+<body style="background-color: bisque;">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    <button onclick="toggleDarkMode()">Dark Mode</button>
+    <button onclick="alert(topla(1,6))"> toplama</button>
+    
+  <div class="ar" id="geriSayim"></div>
+    
+    <h1 id="rastgeleSayi"></h1>
+
+    <script src="star-rating.js"></script>
+   <!--navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+
+    <div class="container-fluid" style="background-color: rgb(224, 159, 79);">
+      <div class="container">
+      
+        <div>
+            
+            <i class="fas fa-home" ></i>
+           
+        </div>
+
+        <div class="star-rating">
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          </div>
+          <input type="text" id="search" placeholder="Arama...">
+    </div>
+      <a class="navbar-brand" class="navbutton" href="#">ALANEXPRESS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" class="navbutton"  id="navbarNav" style="background-color: rgb(224, 159, 79);">
+       
+        <ul class="navbar-nav menu">
+          <li class="nav-item ">
+            <a class="nav-link " aria-current="page" href="#">Anasayfa</a>
+          </li>
+          <li >
+            Ürünler
+                <ul class="submenu">
+                <li>telefonlar</li>
+                <li>bilgisayar</li>
+                <li>beyaz eşyalar</li>
+          </ul>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sepetim<span id="cartCount" class="cart-count"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contact.html" tabindex="-1" aria-disabled="true">bize ulaşin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div style="display:inline-block"><button id="gizle">Gizle</button> 
+  <button id="goster">Göster</button>
+  <p id="metin">iyi alişverişler</p>
+</div>
+ <div style="display: inline-block;"> 
+  <p id="metin2">Bu bir metindir.</p>
+  <button id="degistir">Metni Değiştir</button>
+</div>
+
+<div class="result">
+  <h3>Sonuçlar:</h3>
+  <ul id="search-results"></ul>
+</div>
+
+
+<ul id="data" style="display: none;">
+  <li>laptop</li>
+  <li> mouse</li>
+  <li>klavye</li>
+  <li> mousepad</li>
+  <li> monitor</li>
+</ul>
+
+<!--kayan görseller-->
+   
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" >
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="image/camera-4830248_1920.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="image/imac-1999636_1920.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+       
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="image/teknolojik_urunler.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+       
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+          
+
+
+  <!--ürün kartları-->
+
+  <div  class="card card_renklendirici box card_başlangic_rengi " style="width: 33%;display: inline-block;">
+    <img src="image/kamera.png" class="card-img-top "  alt="..."  style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">tanon</h5>
+      <p class="card-text">2024 model profesyonel kamera <span class="span_classi"  >profesyonel fotoğrafcilara önerilir</span></p>
+      <button onclick="addToCart(); showHeartIcon();" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary" id="myButton">sepetten çikar</button>
+
+  </div>
+  </div>
+  <div  id="myDiv" class="card card_renklendirici box card_başlangic_rengi"style="width: 33%;display: inline-block;" >
+    <img src="image/telefon.png" class="card-img-top" alt="..."  style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">ixphone 23</h5>
+      <p class="card-text">düşmelere dayanikli yüksek çözünürlüklü kameraya sahiptir.Islanmaya karşi dayaniklidir ama <span class="span_classi" > su gecirmez değildir </span></p>
+      <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary" >sepetten çikar</button>
+
+  </div>
+      
+    </div>
+  </div>
+  <div class="card card_renklendirici box card_başlangic_rengi" style="width: 33%; display: inline-block;" >
+    <img src="image/telefon2.png" class="card-img-top" alt="..." style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">samsong</h5>
+      <p class="card-text">düşmelere dayanikli yüksek çözünürlüklü kameraya sahiptir.Islanmaya karşi dayaniklidir ama <span class="span_classi" > su gecirmez değildir <br> </span></p>
+      <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary" >sepetten çikar</button>
+
+  </div>
+    </div>
+  </div>
+  <div class="card card_renklendirici box card_başlangic_rengi "  style="width: 33%;display: inline-block;">
+    <img src="image/laptop.png" class="card-img-top resim"  id="resim" alt="..." style="height: 400px;" >
+    <div class="card-body">
+      <h5 class="card-title">rasos taf gaming 25</h5>
+      <p class="card-text">nvidia rtx 4050 ve 14, nesil işlemciye sahip bu oyun bilgisayari istediğiniz herhangi bir oyun yüksek fps lerde kasmadan rahatlikla oynamanizi sağlar <span class="span_classi">ikinci bir ssd slotu bulunmamaktadir</span> </p>
+      <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary">sepetten çikar</button>
+
+  </div>
+    </div>
+  </div>
+  <div class="card card_renklendirici box card_başlangic_rengi" style="width: 33%;display: inline-block;">
+    <img src="image/kulaklık.png" class="card-img-top" alt="..." style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">dazer kablosuz kulaklik</h5>
+      <p class="card-text">yüksek kalitede ses için bu ürünü tercih edebilirsiniz <span class="span_classi">lütfen kulak sağliği için kullanirken ses düzeyine dikkat edin <br> </span></p>
+      <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary">sepetten çikar</button>
+
+  </div>
+    </div>
+  </div>
+  <div class="card card_renklendirici box card_başlangic_rengi" style="width:33%;display: inline-block;">
+    <img src="image/klavye.png" class="card-img-top" alt="..." style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title"> rm mekanik keyboard  </h5>
+      <p class="card-text">mekanik klavyeler arasinda en cok satilan bu ürünü almanizi tavsiye ederiz <span class="span_classi">temizliği için gerekli aparatlar yaninda hediyedir <br></span></p>
+      <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary" >sepetten çikar</button>
+
+  </div>
+    </div>
+  </div>
+  <div class="card card_renklendirici box card_başlangic_rengi" style="width: 33%;display: inline-block;">
+    <img src="image/monitor.png" class="card-img-top" alt="..." style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">ms monitor</h5>
+      <p class="card-text">165hz olan bu monitor kullanicilar tavsiye edilen bir üründür İhtiyaciniz olan her şey ekraninizda. İzleyin, oynayin ve sohbet edin; bunlarin hepsini ayribir bilgisayara ihtiyaç duymadan bu Akilli Monitör ile yapabilirsiniz</p>
+      <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary">sepetten çikar</button>
+
+  </div>
+    </div>
+  </div>
+  <div class="card card_renklendirici box card_başlangic_rengi" style="width: 33%;display: inline-block;">
+    <img src="image/mouse.png" class="card-img-top" alt="..." style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">Gammec MOGP02 Gaming-Mause, GP 2, 6 tuşlu programlanabilir</h5>
+      <p class="card-text">Bu Gammec GP2 bir oyun fare 6 Key, arkadan aydinlatma ve yonga A704 programlanabilir indirilebilir yazilim ile ilgili Gammec. yazilim, size bir 5 profil + aktarma/dişa, birçok özellikleri: Güvenlik Settare, Office, Windows, multimedya, makro ve, cihazlar ile aydinlatma Loop veya ayarlari.</p>
+      <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary" >sepetten çikar</button>
+
+  </div>
+    </div>
+  </div>
+  <div class="card card_renklendirici box card_başlangic_rengi" style="width: 33%;display: inline-block;">
+    <img src="image/elektriksüpürge.png" class="card-img-top" alt="..." style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title"> ilipsh elektrik süpürgesi</h5>
+      <p class="card-text">Güçlü emiş gücü ve yüksek performans sunan başliklar sayesinde ince tozlarin %99,9'unu süpürebilirsiniz
+        Son derece verimli motorumuz, güçlü emiş gücü üretir ve her seferinde derinlemesine temizlik için daha az enerji harcar</p>
+        <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+        <button onclick="removetocart()"class="btn btn-primary" >sepetten çikar</button>
+
+  </div>
+    </div>
+  </div>
+  <div class="card card_renklendirici box card_başlangic_rengi" style="width: 33%;display: inline-block;">
+    <img src="image/airfry.png" class="card-img-top" alt="..." style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">ristar airfry</h5>
+      <p class="card-text">4,5 litrelik ekstra geniş kapasitesi sayesinde geniş aileler için uygundur.
+        Izgara yapabilir, firinlayabilir, rosto yapabilir ya da kizartabilirsiniz</p>
+        <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+        <button onclick="removetocart()"class="btn btn-primary" >sepetten çikar</button>
+
+  </div>
+    </div>
+  </div><div class="card card_renklendirici box card_başlangic_rengi" style="width: 33%;display: inline-block;">
+    <img src="image/buzdolabı.png" class="card-img-top" alt="..." style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">soğuk depolama ve donma buzdolabi</h5>
+      <p class="card-text">Büyük iç hacmi ve akilli depolama alanlariyla yiyeceklerinizi düzenli ve kolayca saklamanizi  sağlar. Enerji verimliliğiyle de dikkat çeken bu buzdolabi, çevre dostu bir seçenektir.</p>
+      <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary" >sepetten çikar</button>
+
+  </div>
+    </div>
+  </div><div class="card card_renklendirici box card_başlangic_rengi" style="width: 33%;display: inline-block;">
+    <img src="image/wafflemakinesi.png" class="card-img-top" alt="..." style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">Elektrikli Waffle makinesi </h5>
+      <p class="card-text">Özel tasarimi ve güçlü performansiyla kahvaltilariniza veya atiştirmaliklariniza lezzet katacak enfes waffle'lar hazirlamanizi sağlar. Farkli tarifler deneyerek ailenizi ve misafirlerinizi şaşirtabilirsiniz.</p>
+      <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary" >sepetten çikar</button>
+
+  </div>
+    </div>
+  </div>
+  <div class="card card_renklendirici box card_başlangic_rengi" style="width: 33%;display: inline-block;">
+    <img src="image/kablosuzdüzleşterici.pnng.jpg" class="card-img-top" alt="..." style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">Saç düzleştirme çubuğu kablosuz elektrikli</h5>
+      <p class="card-text">güzellik rutininizi kolaylaştirmak için tasarlanmiş kablosuz bir saç düzleştirme çubugudur. Geleneksel düzleştirme cihazlarina kiyasla daha fazla özgürlük sunan kablosuz tasarimiyla, herhangi bir priz arayişi olmadan saçlarinizi düzleştirebilir veya şekillendirebilirsiniz.</p>
+      <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary">sepetten çikar</button>
+
+  </div>
+    </div>
+</div>
+
+<div id="kartlar" style="display: inline-block;">
+  <div class="card card_renklendirici box card_başlangic_rengi" style="width: 33%; display: flex;">
+    <img src="image/havatemizleyici.png" class="card-img-top" alt="..." style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">180 Air hava temizleyici </h5>
+      <p class="card-text">180 Air, ev veya ofis ortaminizi temizlemek ve tazelemek için özel olarak tasarlanmiş bir hava temizleyici cihazidir. Yüksek performansli filtreleme sistemi ile havadaki partikülleri, alerjenleri ve kötü kokulari etkili bir şekilde giderir</p>
+      <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary" >sepetten çikar</button>
+
+  </div>
+    </div  >
+  </div>
+  <div class="card card_renklendirici box card_başlangic_rengi" style="width: 33%; display: inline-block;">
+    <img src="image/gs5.png" class="card-img-top" alt="..." style="height: 400px;">
+    <div class="card-body">
+      <h5 class="card-title">GS5 oyun konsolu</h5>
+      <p class="card-text">oyuncular için geliştirilmiş son teknoloji bir oyun konsoludur. Yüksek performansi, etkileyici grafikleri ve geniş oyun kütüphanesiyle oyun deneyiminizi bir üst seviyeye taiır. </p>
+      <button onclick="addToCart()" class="btn btn-primary">Sepete Ekle</button>
+      <button onclick="removetocart()"class="btn btn-primary" >sepetten çikar</button>
+
+  </div>
+  
+  </div>
+ <button id="kartEkle" class="btn btn-primary">Kart Ekle</button>
+    
+    </div>
+  </div>
+  <iframe width="50%" height="315" src="https://www.youtube.com/embed/qfOwME9wqLY?si=UcMYuyT36JVtX5Jm" title="YouTube video player"
+   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000;"></canvas>
+
+  <footer class="iletişim_kismi" >
+    <div >
+        <div class="ortalama" >
+            <div >
+
+                <a href="index.html">anasayfanin başina dön</a>
+                <p>alişveriş yaparken bizi tercih ettiğiniz için <span class="span_classi">teşekür ederiz </span></p>
+            </div>
+        </div>
+        <div  class="hizli_geciş_kismi">
+            <div >
+                <h3 >HIZLI GECİŞLER</h3>
+                <ul >
+                    <li><a href="#"></a>Ürünler</li>
+                    <li><a href="about.html">SEPETİM</a></li>
+                    <li><a href="contact.html"></a>KAYIT/GİRİŞ</li>
+                </ul>                   
+            </div>
+        </div>
+        <div class="sosyal_medya_kismi">
+            <div >
+                <h3>SOSYAL MEDYA</h3>
+                <ul >
+                    <li><button onclick="redirectToSocialMedia('instagram')" class="fa-brands fa-instagram">İNSTAGRAM</button></li>
+                    <li><button onclick="redirectToSocialMedia('facebook')" class="fa-brands fa-facebook">FACEBOOK</button></li>
+                    <li><button onclick="redirectToSocialMedia('twitter')" class="fa-brands fa-twitter">TWİTTER</button></li>
+                    <button id="saatGosterButton">Saat Göster</button>
+                    <p id="saat"></p>
+                </ul>                   
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="keyboard">
+
+  <div class="key" data-note="C">C</div>
+  <div class="key" data-note="D">D</div>
+  <div class="key" data-note="E">E</div>
+  <div class="key" data-note="F">F</div>
+  <div class="key" data-note="G">G</div>
+  
+</div>
+<button onclick="sayfaBasinaGit()">en başa dön</button>
+
+<audio data-note="C" src="image/a.mp3"></audio>
+<audio data-note="D" src="image/b.mp3"></audio>
+<audio data-note="E" src="image/c.mp3"></audio>
+<audio data-note="F" src="image/d.mp3"></audio>
+<audio data-note="G" src="image/e.mp3"></audio>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+   crossorigin="anonymous"></script> 
+   <script src="js/main.js"></script>
+   <script src="script.js"></script>
+   
+
+</body>
+</html>
+
+
